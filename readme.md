@@ -10,3 +10,7 @@ It is the rabbitMQ default connection string on local:
 - second guest is the password
 - localhost:5672 is RabbitMQ's AMQP port
 
+![alt text](image.png)
+
+I have 2 queues and its unchanged if I run more subscribers. Presumably its a rabbitMQ preconfigured amount.
+
