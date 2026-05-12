@@ -14,3 +14,10 @@ It is the rabbitMQ default connection string on local:
 
 I have 2 queues and its unchanged if I run more subscribers. Presumably its a rabbitMQ preconfigured amount.
 
+![alt text](image-1.png)
+
+The publisher sends all 5 messages rapidly, while the subscriber processes them with a 1 second sleep per message. Messages accumulate in the queue during the processing window, creating the spike.
+
+Possible improvements:
+- Publisher: Add delays between publishing messages instead of sending them all at once in a tight loop
+- Subscriber: Reduce the conceptual delay from the message handler
